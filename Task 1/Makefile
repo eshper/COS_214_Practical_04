@@ -20,5 +20,8 @@ $(MAIN): $(OBJS)
 run: $(MAIN)
 	./$(MAIN)
 
+valgrind: $(MAIN)
+	valgrind --leak-check=full ./$(MAIN)
+
 clean:
 	$(RM) *.o *~ $(MAIN)
