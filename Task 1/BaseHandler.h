@@ -4,12 +4,20 @@
 
 class BaseHandler : public Handler {
 private :
-    int option;
     Handler* next;
 public:
-   BaseHandler(int opt) : Handler() {}
-    void addNext(Handler* next) override;
-    void handleRequest(int opt) override;
+    //string vector for nonces
+    std::vector<std::string> nonces;
+   BaseHandler() : next(nullptr) {}
+    Handler* addNext(Handler* Newnext) override{
+        this->next = Newnext;
+        return Newnext;
+    };
+    void handleRequest(int opt) override{
+        if(this->next){
+            this->next->handleRequest(opt);
+        }
+    };
     ~BaseHandler() {}
 };
 #endif
