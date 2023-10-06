@@ -28,7 +28,6 @@ int main() {
     nonceReqHandler->handleRequest(1);
     nonceReqHandler->handleRequest(2);
     nonceReqHandler->handleRequest(3);
-    nonceReqHandler->handleRequest(4);
 
     // Clean up and return
     delete nonceReqHandler;
