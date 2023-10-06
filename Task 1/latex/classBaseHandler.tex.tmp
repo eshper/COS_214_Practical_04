@@ -1,0 +1,94 @@
+\hypertarget{classBaseHandler}{}\doxysection{Base\+Handler Class Reference}
+\label{classBaseHandler}\index{BaseHandler@{BaseHandler}}
+
+
+{\ttfamily \#include $<$Base\+Handler.\+h$>$}
+
+
+
+Inheritance diagram for Base\+Handler\+:
+% FIG 0
+
+
+Collaboration diagram for Base\+Handler\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBaseHandler_ae0ac3336dc8b5897cc4fabce9bfcb67c}{Base\+Handler}} ()
+\item 
+\mbox{\hyperlink{classHandler}{Handler}} $\ast$ \mbox{\hyperlink{classBaseHandler_acdd6b0b91627ab5c7415fc63369427b4}{add\+Next}} (\mbox{\hyperlink{classHandler}{Handler}} $\ast$Newnext) override
+\item 
+void \mbox{\hyperlink{classBaseHandler_ae19241f7ccfe09f92165ea553f6328fb}{handle\+Request}} (int opt) override
+\item 
+\mbox{\hyperlink{classBaseHandler_a003a2e7c9e38f5de1859014d3d5aa41a}{$\sim$\+Base\+Handler}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBaseHandler_ac0c2da8c1d7ee0156013ca0af1ce1b84}\label{classBaseHandler_ac0c2da8c1d7ee0156013ca0af1ce1b84}} 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classBaseHandler_ac0c2da8c1d7ee0156013ca0af1ce1b84}{nonces}}
+\begin{DoxyCompactList}\small\item\em string vector for nonces \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for handlers with additional functionality. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBaseHandler_ae0ac3336dc8b5897cc4fabce9bfcb67c}\label{classBaseHandler_ae0ac3336dc8b5897cc4fabce9bfcb67c}} 
+\index{BaseHandler@{BaseHandler}!BaseHandler@{BaseHandler}}
+\index{BaseHandler@{BaseHandler}!BaseHandler@{BaseHandler}}
+\doxysubsubsection{\texorpdfstring{BaseHandler()}{BaseHandler()}}
+{\footnotesize\ttfamily Base\+Handler\+::\+Base\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor for \mbox{\hyperlink{classBaseHandler}{Base\+Handler}}. \mbox{\Hypertarget{classBaseHandler_a003a2e7c9e38f5de1859014d3d5aa41a}\label{classBaseHandler_a003a2e7c9e38f5de1859014d3d5aa41a}} 
+\index{BaseHandler@{BaseHandler}!````~BaseHandler@{$\sim$BaseHandler}}
+\index{````~BaseHandler@{$\sim$BaseHandler}!BaseHandler@{BaseHandler}}
+\doxysubsubsection{\texorpdfstring{$\sim$BaseHandler()}{~BaseHandler()}}
+{\footnotesize\ttfamily Base\+Handler\+::$\sim$\+Base\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default destructor for \mbox{\hyperlink{classBaseHandler}{Base\+Handler}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBaseHandler_acdd6b0b91627ab5c7415fc63369427b4}\label{classBaseHandler_acdd6b0b91627ab5c7415fc63369427b4}} 
+\index{BaseHandler@{BaseHandler}!addNext@{addNext}}
+\index{addNext@{addNext}!BaseHandler@{BaseHandler}}
+\doxysubsubsection{\texorpdfstring{addNext()}{addNext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHandler}{Handler}}$\ast$ Base\+Handler\+::add\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHandler}{Handler}} $\ast$}]{Newnext }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Add a next handler to the chain. 
+\begin{DoxyParams}{Parameters}
+{\em Newnext} & The next handler to be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The added handler. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classHandler_a29d88032c1fd83cb5770b36dd25f9266}{Handler}}.
+
+\mbox{\Hypertarget{classBaseHandler_ae19241f7ccfe09f92165ea553f6328fb}\label{classBaseHandler_ae19241f7ccfe09f92165ea553f6328fb}} 
+\index{BaseHandler@{BaseHandler}!handleRequest@{handleRequest}}
+\index{handleRequest@{handleRequest}!BaseHandler@{BaseHandler}}
+\doxysubsubsection{\texorpdfstring{handleRequest()}{handleRequest()}}
+{\footnotesize\ttfamily void Base\+Handler\+::handle\+Request (\begin{DoxyParamCaption}\item[{int}]{opt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Handle a request based on the provided option. 
+\begin{DoxyParams}{Parameters}
+{\em opt} & The option to be handled. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classHandler_ada15b8e75579610e4e4ca17bf0db1f71}{Handler}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classVerifySignHandler_a42e737e762fcd6726f179689f8ec910d}{Verify\+Sign\+Handler}}, \mbox{\hyperlink{classValidateHandler_adcd60e5ba1f904e10c5088243544725c}{Validate\+Handler}}, \mbox{\hyperlink{classReqHandler_af72d3c56fd336527c8bb1b41b7527613}{Req\+Handler}}, and \mbox{\hyperlink{classNonceReqHandler_a7dd71bed91a5a8c1b7368b50734ae6c2}{Nonce\+Req\+Handler}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Base\+Handler.\+h\end{DoxyCompactItemize}
