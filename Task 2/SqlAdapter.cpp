@@ -2,18 +2,20 @@
 
 std::vector<Users> SqlAdapter::selectAllUsers()
 {
-    std::string result =  newsql.execute(selectAllUsersSQL);
+    std::string result = newsql.execute(selectAllUsersSQL);
 
     std::vector<Users> users;
 
     size_t startPos = 0;
     size_t endPos = result.find('\n', startPos);
 
-    while (endPos != std::string::npos) {
+    while (endPos != std::string::npos)
+    {
         std::string line = result.substr(startPos, endPos - startPos);
         size_t commaPos = line.find(',');
-        
-        if (commaPos != std::string::npos) {
+
+        if (commaPos != std::string::npos)
+        {
             Users user;
             user.ID = std::stoi(line.substr(0, commaPos));
             user.name = line.substr(commaPos + 1);
@@ -25,13 +27,12 @@ std::vector<Users> SqlAdapter::selectAllUsers()
     }
 
     return users;
-    
 }
 
 SqlAdapter::SqlAdapter(NewSql newsql)
 {
     this->newsql = newsql;
-    this->selectAllUsersSQL = "FROM table SELECT *";
+    this->selectAllUsersSQL = "FROM users SELECT *";
 }
 
 SqlAdapter::~SqlAdapter()

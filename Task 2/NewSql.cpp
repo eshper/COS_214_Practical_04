@@ -5,7 +5,7 @@ NewSql::NewSql(/* args */)
 }
 
 NewSql::~NewSql()
-{ 
+{
 }
 
 std::string NewSql::execute(std::string sql)
