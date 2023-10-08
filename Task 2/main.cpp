@@ -11,7 +11,7 @@ int main()
     std::vector<Users> users;
     users = orm->selectAllUsers();
 
-    //ORM current sql statement:
+    // ORM current sql statement:
     std::cout << orm->selectAllUsersSQL << std::endl;
     for (const Users &user : users)
     {
@@ -31,5 +31,4 @@ int main()
     {
         std::cout << "ID: " << user.ID << ", Name: " << user.name << std::endl;
     }
-
 }

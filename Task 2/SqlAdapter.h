@@ -4,17 +4,15 @@
 #include "NewSql.h"
 #include "Orm.h"
 
-
-class SqlAdapter: public Orm
+class SqlAdapter : public Orm
 {
-private: 
+private:
     NewSql newsql;
+
 public:
     std::vector<Users> selectAllUsers();
     SqlAdapter(NewSql newsql);
     ~SqlAdapter();
 };
-
-
 
 #endif
