@@ -24,6 +24,14 @@ int main()
     NewSql newsql;
     SqlAdapter adapter(newsql);
 
+    std::cout << "Selecting all users using the adapter with old sql \n";
+    users2 = adapter.selectAllUsersOld();
+    for(const Users &user : users2)
+    {
+        std::cout << "ID: " << user.ID << ", Name: " << user.name << std::endl;
+    }
+
+
     std::cout << adapter.selectAllUsersSQL << std::endl;
     users2 = adapter.selectAllUsers();
 
@@ -31,11 +39,6 @@ int main()
     {
         std::cout << "ID: " << user.ID << ", Name: " << user.name << std::endl;
     }
-    std::cout << "Selecting all users using the adapter with old sql \n";
-    users2 = adapter.selectAllUsersOld();
-    for(const Users &user : users2)
-    {
-        std::cout << "ID: " << user.ID << ", Name: " << user.name << std::endl;
-    }
+    
 
 }

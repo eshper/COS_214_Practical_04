@@ -3,7 +3,7 @@
 Orm::Orm()
 {
     oldsql = new OldSql;
-    selectAllUsersSQL = "SELECT * FROM users";
+    
 
 }
 
@@ -14,6 +14,7 @@ Orm::~Orm()
 
 std::vector<Users> Orm::selectAllUsers()
 {
+    selectAllUsersSQL = "FROM users SELECT *";
     // std::cout << selectAllUsersSQL;
     std::string result =  oldsql->execute(selectAllUsersSQL);
     

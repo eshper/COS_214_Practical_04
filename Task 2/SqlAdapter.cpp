@@ -31,7 +31,7 @@ std::vector<Users> SqlAdapter::selectAllUsers()
 SqlAdapter::SqlAdapter(NewSql newsql)
 {
     this->newsql = newsql;
-    this->selectAllUsersSQL = "FROM table SELECT *";
+    this->selectAllUsersSQL = "SELECT * FROM users";
 }
 
 SqlAdapter::~SqlAdapter()
