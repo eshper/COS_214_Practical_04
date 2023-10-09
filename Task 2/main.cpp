@@ -6,17 +6,17 @@
 int main()
 {
 
-    // OLD sql
-    Orm *orm = new Orm;
-    std::vector<Users> users;
-    users = orm->selectAllUsers();
+    // // OLD sql
+    // Orm *orm = new Orm;
+    // std::vector<Users> users;
+    // users = orm->selectAllUsers();
 
-    // ORM current sql statement:
-    std::cout << orm->selectAllUsersSQL << std::endl;
-    for (const Users &user : users)
-    {
-        std::cout << "ID: " << user.ID << ", Name: " << user.name << std::endl;
-    }
+    // //ORM current sql statement:
+    // std::cout << orm->selectAllUsersSQL << std::endl;
+    // for (const Users &user : users)
+    // {
+    //     std::cout << "ID: " << user.ID << ", Name: " << user.name << std::endl;
+    // }
 
     std::cout << "Selecting all users using the adapter \n";
 
@@ -31,4 +31,11 @@ int main()
     {
         std::cout << "ID: " << user.ID << ", Name: " << user.name << std::endl;
     }
+    std::cout << "Selecting all users using the adapter with old sql \n";
+    users2 = adapter.selectAllUsersOld();
+    for(const Users &user : users2)
+    {
+        std::cout << "ID: " << user.ID << ", Name: " << user.name << std::endl;
+    }
+
 }

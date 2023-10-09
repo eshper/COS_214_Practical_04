@@ -8,11 +8,13 @@
 class Orm
 {
 public:
-    OldSql *oldsql;
+    OldSql* oldsql;
     std::string selectAllUsersSQL;
     Orm();
     ~Orm();
     std::vector<Users> selectAllUsers();
+
 };
+
 
 #endif
